@@ -1,13 +1,13 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     font-family: "Gabarito", sans-serif;
 }
 
-.navbar{
+.navbar {
     display: flex;
     padding: 10px;
     justify-content: space-between;
@@ -20,11 +20,11 @@ body{
     z-index: 1;
 }
 
-.navbar-s1__title{
+.navbar-s1__title {
     color: #A435F0;
 }
 
-.navbar-s2{
+.navbar-s2 {
     padding: 10px;
     border: solid 1px black;
     border-radius: 30px;
@@ -32,21 +32,21 @@ body{
     display: flex;
     gap: 10px;
     align-items: center;
-   
+
 }
 
-.navbar-s2 input{
+.navbar-s2 input {
     border: none;
     width: 100%;
     font-size: 16px;
     background-color: transparent;
 }
 
-.navbar-s2 input:focus{
+.navbar-s2 input:focus {
     outline: none;
 }
 
-.navbar-s3{
+.navbar-s3 {
     display: flex;
     gap: 15px;
     align-items: center;
@@ -54,12 +54,12 @@ body{
 
 /* my learning popup */
 
-.my-learning{
+.my-learning {
     position: relative;
     cursor: pointer;
 }
 
-.my-learning__popup{
+.my-learning__popup {
     position: absolute;
     background-color: white;
     border: solid black 1px;
@@ -71,30 +71,40 @@ body{
 
 }
 
-.my-learning:hover .my-learning__popup{
+.my-learning:hover .my-learning__popup {
     display: block;
 }
 
-.categories{
+.categories {
     display: flex;
     padding: 10px;
     justify-content: space-around;
     border: solid black 1px;
 }
 
-.categories p{
+.categories p {
     background-color: #A435F0;
     color: white;
     border-radius: 30px;
     padding: 10px;
+    cursor: pointer;
+    border: solid #A435F0 1px;
 }
 
 
-.sale-image{
+.categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+
+}
+
+
+.sale-image {
     position: relative;
 }
 
-.sale-image__offer{
+.sale-image__offer {
     width: 35%;
     border: solid black 2px;
     background-color: white;
@@ -102,36 +112,56 @@ body{
     position: absolute;
     top: 10%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
-.sale-image img{
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+
+    }
+
+
+}
+
+.sale-image img {
     width: 100%;
 }
 
-.recommended{
+.recommended {
     padding: 10px;
 }
 
-.course-card{
+.course-card {
     width: 270px;
 }
 
-.recommended-container{
+.recommended-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
-.course-card img{
+.course-card img {
     width: 100%;
     height: 50%;
 }
 
-.topics{
+.topics {
     padding: 10px;
 }
 
-.topics__container{
+.topics__container {
     display: flex;
     gap: 10px;
     margin-top: 10px;
@@ -139,44 +169,43 @@ body{
 
 }
 
-.topics__container p{
+.topics__container p {
     border: solid grey 2px;
     padding: 10px;
     flex-grow: 1;
     flex-basis: 25%;
 }
 
-.popular{
+.popular {
     padding: 10px;
 }
 
-.popular__container{
+.popular__container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 10px;
 }
 
-.footer{
+.footer {
     padding: 10px;
     background-color: black;
     color: white;
 
 }
 
-.footer__one{
+.footer__one {
     display: flex;
     gap: 10px;
 }
 
-.footer__two{
+.footer__two {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px;
 }
 
-.footer__one p{
+.footer__one p {
     margin: 20px;
 }
-
